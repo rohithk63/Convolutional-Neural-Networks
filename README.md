@@ -1,7 +1,7 @@
-# 180-DC-ML_assignment-RohithKallurayaK
+# Convolutional Neural Networks
 
-## REPORT FOR CHALLENGE_1
-The challenge_1 uses a two-stage deep learning pipeline: a denoising autoencoder followed by a simple CNN classifier. The reasoning is that with this method the classification of noisy images is better achieved. Noisy data can make it difficult for a CNN to learn class-discriminative features, and thus the model may have poor generalization. With the introduction of a specific denoising stage, the system guarantees that the cleaner, structured inputs are provided to the classifier.
+## Report for Denoising Autoencoder
+The Denoising autoencoder uses a two-stage deep learning pipeline: a denoising autoencoder followed by a simple CNN classifier. The reasoning is that with this method the classification of noisy images is better achieved. Noisy data can make it difficult for a CNN to learn class-discriminative features, and thus the model may have poor generalization. With the introduction of a specific denoising stage, the system guarantees that the cleaner, structured inputs are provided to the classifier.
 
 The autoencoder follows supervised learning, trained on paired noisy and clean images. The encoder gradually decreases image dimensionality using convolutional layers, and the decoder maps back into the original image form. The network is trained using mean squared error (MSE) loss, which brings about a contrast between the actual clean image and the one we made from our model. Evaluations are also done with metrics like PSNR and SSIM, that measure image quality in excess of raw pixel difference. That prevents the model from denoising superficially but also maintaining significant structural information.
 
